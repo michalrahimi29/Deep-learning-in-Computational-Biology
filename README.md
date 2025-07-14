@@ -8,4 +8,4 @@ RNA-binding proteins (RBPs) play a significant role in various cellular processe
 ### Model architecture:
 We implemented a Convolutional Neural Network (CNN) to predict the RNA binding preferences from RNA bind-n-seq data. The input is a one-hot encoding of size of the maximum sequence length of RNAcompete or RNA Bind-n-Seq sequences. The labels are corresponded to the different concentrations. The input file was labeled as 0, concentrations that smaller than 100nM ware labeled as 1, concentrations between 100nM and 500nM were labeled as 2 and concentrations above 500nM was labeled as 3.
 
-(model architecture.png)
+![Model Architecture](model_architecture.png)
