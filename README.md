@@ -9,3 +9,11 @@ RNA-binding proteins (RBPs) play a significant role in various cellular processe
 We implemented a Convolutional Neural Network (CNN) to predict the RNA binding preferences from RNA bind-n-seq data. The input is a one-hot encoding of size of the maximum sequence length of RNAcompete or RNA Bind-n-Seq sequences. The labels are corresponded to the different concentrations. The input file was labeled as 0, concentrations that smaller than 100nM ware labeled as 1, concentrations between 100nM and 500nM were labeled as 2 and concentrations above 500nM was labeled as 3.
 
 ![Model Architecture](model_architecture.png)
+
+### Aggregation functions:
+Our model outputs consist of 4 classes, therefore, we required an aggregation function to combine the model probabilities into a single binding score. Throughout our work, we explored various aggregation functions to attain the highest Pearson correlations between the model output and the RNAcompete score. The aggregation functions we examined were:
+
+(1)  concentration_3+ 〖concentration_2+ concentration〗_1- concentration_0
+(2)  concentration〗_3+concentration_2  - concentration_0
+(3)  concentration〗_3+ concentration_2
+(4)  max⁡(concentration)-min⁡(concentration)
