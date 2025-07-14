@@ -13,11 +13,11 @@ We implemented a Convolutional Neural Network (CNN) to predict the RNA binding p
 ### Aggregation functions:
 Our model outputs consist of 4 classes, therefore, we required an aggregation function to combine the model probabilities into a single binding score. Throughout our work, we explored various aggregation functions to attain the highest Pearson correlations between the model output and the RNAcompete score. The aggregation functions we examined were:
 
-(1)  concentration_3 + concentration_2 + concentration_1 - concentration_0
+(1)  concentration3 + concentration2 + concentration1 - concentration0
 
-(2)  concentration_3 + concentration_2 - concentration_0
+(2)  concentration3 + concentration2 - concentration0
 
-(3)  concentration_3 + concentration_2
+(3)  concentration3 + concentration2
 
 (4)  max⁡(concentration)-min⁡(concentration)
 
